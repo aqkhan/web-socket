@@ -7,7 +7,8 @@ var wss = new webSocketServer({port: 5000});
 
 // On establishing connection
 wss.on('connection', function(ws){
-    ws.on('message', function(message){
+    try {
+        ws.on('message', function(message){
         if (message === 'exit') {
             ws.close();
         }
@@ -17,9 +18,14 @@ wss.on('connection', function(ws){
             });
         }
     });
-    ws.send("Connection established");
+    }
+    catch(e) {
+        console.log('Error! ' + e);
+    }
+    ws.send("Welcome to web socket");
 });
 
 wss.on('close', function(ws){
     ws.send("Connection closed");
 });
+
