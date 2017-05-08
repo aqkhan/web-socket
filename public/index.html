@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <style>
+        body {
+            background-color: black;
+            color: white
+        }
+    </style>
+    <body>
+        <form action="/" method="post">
+            <input type="text" placeholder="New term" name="new_term">
+            <input type="text" placeholder="New term" name="new_definition">
+            <input type="submit" value="Add Term">
+        </form>
+        <script>
+            var ws = WebSocket('ws://ec2-35-165-180-185.us-west-2.compute.amazonaws.com:3000/');
+            ws.onopen = function(){
+                console.log('Socket connection established');
+            };
+            ws.onclose = function(){
+                console.log('Socket connection established');
+            };
+            ws.onmessage = function(payload) {
+                console.log('Data received: ' + payload.data);
+            }
+        </script>
+    </body>
+</html>
