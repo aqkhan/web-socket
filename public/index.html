@@ -17,12 +17,13 @@
             <input type="submit" value="Add Term">
         </form>
         <script>
-            var ws = WebSocket('ws://ec2-35-165-180-185.us-west-2.compute.amazonaws.com:3000/');
+            // var ws = new WebSocket('ws://ec2-35-165-180-185.us-west-2.compute.amazonaws.com:3000/');
+            var ws = new WebSocket('ws://localhost:5000/');
             ws.onopen = function(){
                 console.log('Socket connection established');
             };
             ws.onclose = function(){
-                console.log('Socket connection established');
+                console.log('DICONNECTED');
             };
             ws.onmessage = function(payload) {
                 console.log('Data received: ' + payload.data);

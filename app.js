@@ -2,7 +2,7 @@
 var webSocketServer = require('ws').Server;
 
 // Create web socket server
-var wss = new webSocketServer({port: 3000});
+var wss = new webSocketServer({port: 5000});
 // Another example: const ws = new WebSocket('ws://www.host.com/path');
 
 // On establishing connection
