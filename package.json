@@ -1,0 +1,26 @@
+{
+  "name": "web-socket-server",
+  "version": "0.0.1",
+  "description": "Setting up a web socket server using node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqkhan/web-socket.git"
+  },
+  "keywords": [
+    "web",
+    "socket"
+  ],
+  "author": "A Q Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aqkhan/web-socket/issues"
+  },
+  "homepage": "https://github.com/aqkhan/web-socket#readme",
+  "dependencies": {
+    "ws": "^2.3.1"
+  }
+}
