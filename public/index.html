@@ -17,8 +17,8 @@
             <input type="submit" value="Add Term">
         </form>
         <script>
-            // var ws = new WebSocket('ws://ec2-35-165-180-185.us-west-2.compute.amazonaws.com:3000/');
-            var ws = new WebSocket('ws://localhost:5000/');
+            var ws = new WebSocket('ws://ec2-35-165-180-185.us-west-2.compute.amazonaws.com:5000/');
+            // var ws = new WebSocket('ws://localhost:5000/');
             ws.onopen = function(){
                 console.log('Socket connection established');
             };
